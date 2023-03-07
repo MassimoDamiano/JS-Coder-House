@@ -11,7 +11,7 @@ li{
 
 .tittle{
     font-weight: bold;
-    margin: 10px 30px;
+    margin: 10px;
     color: white;
 }
 
@@ -21,13 +21,45 @@ header{
     align-items: center;
     background-color: #000;
 }
+.buscador{
+    margin-left: 50px;
+    width: 300px;
+}
 
+
+
+.sub-header{
+    background-color: rgb(61, 6, 6);
+    height: 70px;
+    
+
+}
 .header-list{
     display: flex;
     list-style: none;
-    color: white;
+   color: white;
+   font-weight: bold;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
 
 }
+li{
+    margin-top: 20px;
+}
+.header_tittle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono{
+    height: 60px;
+    margin: 10px;
+    width: 60px;
+}
+
+
 p{
        text-align: center;
        font-weight: bold;
