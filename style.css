@@ -1,0 +1,35 @@
+h1{
+    margin: 60px 41px;
+}
+h3{
+    margin: 30px 50px;
+}
+li{
+    margin: 10px;
+
+}
+
+.tittle{
+    font-weight: bold;
+    margin: 10px 30px;
+    color: white;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+}
+
+.header-list{
+    display: flex;
+    list-style: none;
+    color: white;
+
+}
+p{
+       text-align: center;
+       font-weight: bold;
+       
+}
