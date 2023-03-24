@@ -1,44 +1,81 @@
-const mensajeConsulta = "Ingresa el codigo de bebida para saber su precio: \n" +
-                        "a) Promo Fernet y Coca Cola 2.5L \n" +
-                        "b) Vodka absolut \n" +
-                        "c) Promo Vino balbo y Prity 2.25L \n" +
-                        "d) Gin Tonic \n" +
-                        "e) Ron Cayman de Uva" 
 
-continuar = true
+const carrito = [] 
 
-function consultarPrecio(){
-   let opcionBebida = prompt(mensajeConsulta).toLocaleLowerCase().trim()
+
+const productos = [
+   {nombre: "ferne", codigo: 1, tipo: "licor", precio: 2500},
+   {nombre: "vodka", codigo: 2, tipo: "bebida blanca", precio: 6000},
+   {nombre:"valvo" ,codigo: 3, tipo: "vino", precio: 700},
+   {nombre:"gin tonic" ,codigo: 4, tipo: "bebida blanca", precio: 2500},
+   {nombre:"ron ",codigo: 5, tipo: "bebida blanca", precio: 800}
+]
+
+
+
+
+const mensajeConsulta = "Elejí tu bebida mediante un codigo 1-5"
+/* funciones PRINCIPALES */
+
+
+
+function verCarrito(){
+   console.table(carrito)
+}
+
+function finalizarPedido(){
+   if (carrito.length > 0 ) {
+     const  eccomerse = new Pedido(carrito)
+      alert(`El costo del carrito es de $ ${eccomerse.saberPrecio()}`)
+      let respuesta = confirm("Desea realizar el pago?")
+         if(respuesta){
+            alert(eccomerse.confirmarPedido())
+            carrito.length = 0
+         }else{
+            alert("No hay bebidas en el carrito  ")
+         }
+   }
+}
+
+
+function buscarProducto(codigo){
+   let resultado = productos.find((producto)=> producto.codigo === parseInt(codigo))
+          return resultado
+   }
+
+
+
+function comprarProductos(){
    
-   if(opcionBebida != "a" && opcionBebida != "b" && opcionBebida != "c" && opcionBebida != "d" && opcionBebida != "e"){
-        alert("Este valor no esta permitido")
+   let codigo = prompt(mensajeConsulta)
+   if (!parseInt(codigo)) {
+      alert("Error en el codigo")
+      let respuesta = confirm("Desea intentar de nuevo? ")
+      if(respuesta){
+         comprarProductos()
+       }
+      return
+   
+   }if(codigo == undefined){
+      alert("Error en el codigo ingresado")
+      let respuesta = confirm("Queres intentar otra vez?")
+      if(respuesta){
+
+         comprarProductos()
+      }
    }else{
-      switch(opcionBebida){
-         case "a":
-            alert("La promo de fernet con coca sale 3500$")
-            break
-         case "b":
-            alert("El vodka absolut sale 6000$")
-            break
-         case "c":
-            alert("La promo del vinaso sale 2500$")
-            break
-         case "d":
-            alert("El gin tonic sale 1800$")
-            break
-         case "e":
-            alert("El cayman de uva sale 700$")
-            alert("Suerte con la resaca")
-            break
-         default:
-            alert("Error... algo salio mal")
+      let productoElejido = buscarProducto(codigo)
+      if(productoElejido !== undefined) {
+         alert(`${productoElejido.nombre} fue agregado al carrito`)
+         carrito.push(productoElejido)
+         let respuesta = confirm("Queres llevar otro producto?")
+         if(respuesta){
+            comprarProductos()
+         }else{
+            finalizarPedido()
+         }
       }
    }
 }
-function preguntar(){
-   while(continuar){
-      consultarPrecio()
-      continuar = confirm("Queres seguir consultando precios?")
+   
 
-   }
-}
+
