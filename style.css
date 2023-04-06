@@ -120,9 +120,7 @@ header{
     margin-bottom: 30px;
 
 }
-li{
-    margin-top: 20px;
-}
+
 .header_tittle{
     display: flex;
     justify-content: center;
@@ -227,4 +225,8 @@ iframe{
 p{
     color: rgba(181, 184, 181, 0.6);
     font-size: 14px;
+}
+
+.buscador{
+    color:#000
 }

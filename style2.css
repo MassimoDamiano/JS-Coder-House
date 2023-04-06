@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    font-family: "roboto";
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #fff
+}
+
+h1{
+    margin: 60px 41px;
+}
+
+li{
+    margin: 10px;
+
+}
+
+.tittle{
+    font-weight: bold;
+    margin: 10px;
+    color: white;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+}
+.buscador{
+    margin-left: 50px;
+    width: 300px;
+}
+
+
+
+.sub-header{
+    background-color: rgb(61, 6, 6);
+    height: 70px;
+    
+
+}
+.header-list{
+    display: flex;
+    list-style: none;
+   color: white;
+   font-weight: bold;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+
+.header_tittle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono{
+    height: 60px;
+    margin: 10px;
+    width: 60px;
+}
+
+
+
+.carrito-productos{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+img{
+    width: 4rem;
+    border-radius: 1rem;
+}
+
+.carrito-producto{
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    align-items: center;
+}
+.carrito-producto-eliminar{
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid rgb(61, 6, 6);;
+}
+
+.contenedor-carrito{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.carrito-acciones{
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrito-acciones-vaciar{
+    border: 0;
+    background-color: gray;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.carrito-acciones-comprar{
+    border: 0;
+    background-color: gray;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.carrito-acciones-derecha{
+    display: flex;
+}
+
+.carrito-acciones-total{
+    display: flex;
+    
+    background-color: gray;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.disabled{
+    display: none;
+}

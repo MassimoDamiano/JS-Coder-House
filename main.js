@@ -1,81 +1,109 @@
+const productosArray =[
+   {
+      id:"vodka-sky-raspberry",
+      titulo:"VODKA SKYY RASPBERRY",
+      imagen: "./images/1810-skyy-raspberry-600x600.jpg",
+      categoria:{
+         nombre:"Bebida Blanca",
+         id:"vodka"
+      },
+      precio: 2500
+   },
+   {
+      id:"vodka-absolut",
+      titulo:"VODKA ABSOLUT",
+      imagen: "./images/1813-absolut-vodka-600x600.jpg",
+      categoria:{
+         nombre:"Bebida Blanca",
+         id:"vodka"
+      },
+      precio: 3000
+   },
+   {
+      id:"vodka-absolut-mango",
+      titulo:"VODKA ABSOLUT MANGO",
+      imagen: "./images/1860-absolut-mango-560x560.jpg",
+      categoria:{
+         nombre:"Bebida Blanca",
+         id:"vodka"
+      },
+      precio: 3500
+   },
+   {
+      id:"vodka-sky-citrus",
+      titulo:"VODKA SKYY CITRUS",
+      imagen: "./images/1811-skyy-citrus-300x300.jpg",
+      categoria:{
+         nombre:"Bebida Blanca",
+         id:"vodka"
+      },
+      precio: 2500
+   },
+   {
+      id:"vino-balbo",
+      titulo:"VINO BALBO",
+      imagen: "./images/102-vinas-de-balbo-tinto-1125cc-300x300.jpg",
+      categoria:{
+         nombre:"vino",
+         id:"balbo"
+      },
+      precio: 700
+   },
+   {
+      id:"fernet",
+      titulo:"FERNET",
+      imagen: "./images/fernet.jpg",
+      categoria:{
+         nombre:"Bebida Blanca",
+         id:"vodka"
+      },
+      precio: 2000
+   },
+   {
+      id:"coca-cola",
+      titulo:"COCA COLA 2.25L",
+      imagen: "./images/coca.jpg",
+      categoria:{
+         nombre:"gaseosa",
+         id:"coca-cola"
+      },
+      precio: 500
+   },
+   {
+      id:"pritty",
+      titulo:"PRITTY 2.25L",
+      imagen: "./images/pritty.jpg",
+      categoria:{
+         nombre:"gaseosa",
+         id:"pritty"
+      },
+      precio: 350
+   }
 
-const carrito = [] 
-
-
-const productos = [
-   {nombre: "ferne", codigo: 1, tipo: "licor", precio: 2500},
-   {nombre: "vodka", codigo: 2, tipo: "bebida blanca", precio: 6000},
-   {nombre:"valvo" ,codigo: 3, tipo: "vino", precio: 700},
-   {nombre:"gin tonic" ,codigo: 4, tipo: "bebida blanca", precio: 2500},
-   {nombre:"ron ",codigo: 5, tipo: "bebida blanca", precio: 800}
 ]
 
+const contenedorProductos = document.querySelector("#contenedor-productos")
 
-
-
-const mensajeConsulta = "Elejí tu bebida mediante un codigo 1-5"
-/* funciones PRINCIPALES */
-
-
-
-function verCarrito(){
-   console.table(carrito)
+function cargarProductos(){
+   productosArray.forEach(producto => {
+      const div =document.createElement("div")
+      div.classList.add("producto");
+      div.innerHTML = `
+      
+      <img src="${producto.imagen}" alt="${producto.titulo}" class="producto-imagen">
+      <div class="producto-detalles">
+          <h3>${producto.titulo}</h3>
+          <p class="producto-precio">${producto.precio}</p>
+           <button class="producto-agregar" id="${producto.id}" >AGREGAR</button>
+       </div>
+     
+      
+      `
+     
+      contenedorProductos.append(div)
+   })
 }
 
-function finalizarPedido(){
-   if (carrito.length > 0 ) {
-     const  eccomerse = new Pedido(carrito)
-      alert(`El costo del carrito es de $ ${eccomerse.saberPrecio()}`)
-      let respuesta = confirm("Desea realizar el pago?")
-         if(respuesta){
-            alert(eccomerse.confirmarPedido())
-            carrito.length = 0
-         }else{
-            alert("No hay bebidas en el carrito  ")
-         }
-   }
-}
-
-
-function buscarProducto(codigo){
-   let resultado = productos.find((producto)=> producto.codigo === parseInt(codigo))
-          return resultado
-   }
-
-
-
-function comprarProductos(){
-   
-   let codigo = prompt(mensajeConsulta)
-   if (!parseInt(codigo)) {
-      alert("Error en el codigo")
-      let respuesta = confirm("Desea intentar de nuevo? ")
-      if(respuesta){
-         comprarProductos()
-       }
-      return
-   
-   }if(codigo == undefined){
-      alert("Error en el codigo ingresado")
-      let respuesta = confirm("Queres intentar otra vez?")
-      if(respuesta){
-
-         comprarProductos()
-      }
-   }else{
-      let productoElejido = buscarProducto(codigo)
-      if(productoElejido !== undefined) {
-         alert(`${productoElejido.nombre} fue agregado al carrito`)
-         carrito.push(productoElejido)
-         let respuesta = confirm("Queres llevar otro producto?")
-         if(respuesta){
-            comprarProductos()
-         }else{
-            finalizarPedido()
-         }
-      }
-   }
-}
-   
+cargarProductos(productos)
 
 
