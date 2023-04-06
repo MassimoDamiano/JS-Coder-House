@@ -1,9 +1,85 @@
+
+
+*{
+    box-sizing: border-box;
+    font-family: "roboto";
+}
+body{
+    background-color: #000;
+} 
+a{
+    text-decoration: none;
+    color: #fff
+}
+
+
+/* Slider*/
+
+.container-slider{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.slider{
+    display: flex;
+    height: 600px;
+    width: 400%;
+    margin-left: -100%;
+}
+.slider__section{
+    width: 100%;
+}
+
+
+.slider__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+
+}
+.text-slider{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    text-shadow: #000;
+    color: rgb(250, 9, 9);
+
+}
+
+.slider__btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider__btn__right{
+    right: 10px;
+    color: white;
+}
+.slider__btn__left{
+    left: 10px;
+    color: white;
+
+}
+
+
 h1{
     margin: 60px 41px;
 }
-h3{
-    margin: 30px 50px;
-}
+
 li{
     margin: 10px;
 
@@ -60,8 +136,95 @@ li{
 }
 
 
+
+
+h2{
+    display: block;
+    margin: 50px ;
+}
+
+
+.section-productos{
+    background-color: rgb(61, 6, 6);
+
+}
+
+.contenedor-productos{
+    display: flex;
+    justify-content: center;
+}
+
+.producto-imagen{
+    height: 200px;
+    width: 200px;
+}
+.tittle-productos{
+    margin: 30px 50px;
+    color: white;
+}
+
+.producto{
+    
+    margin: 20px 30px;
+    
+}
+h3{
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(248, 248, 248);
+    margin-top: 10px;
+}
+
+.producto-agregar{
+    width: 100%;
+    color: white ;
+    background-color: #000;
+}
+
+.producto-precio{
+    color: rgb(255, 255, 255);
+}
+
+.section-form{
+    margin: 0px 100px;
+}
+
+label{
+    color: #fff;
+    display: block;
+    margin-top: 10px;
+}
+input{
+    color: #fff;
+    width: 510px;
+    margin-top: 10px;
+}
+.tittle-form{
+        color: #fff;
+ margin-top: 50px;
+ font-size: 2rem;
+ font-weight: bold;
+}
+
+.section-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.block{
+    margin: 0px 100px;
+}
+.data{
+    margin-right: -20px;
+    margin-top: -30px;
+}
+span{
+    display: block;
+}
+iframe{
+    width: 500px;
+}
 p{
-       text-align: center;
-       font-weight: bold;
-       
+    color: rgba(181, 184, 181, 0.6);
+    font-size: 14px;
 }
