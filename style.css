@@ -142,10 +142,7 @@ h2{
 }
 
 
-.section-productos{
-    background-color: rgb(61, 6, 6);
 
-}
 
 .contenedor-productos{
     display: flex;
@@ -229,4 +226,44 @@ p{
 
 .buscador{
     color:#000
+}
+.boton-menu{
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.boton-menu.active {
+    background-color: rgb(100, 3, 3);
+    color: #000;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    
+}
+
+.boton-menu.active::before {
+    content: '';
+    height: 2rem;
+    bottom: 100%;
+    right: 0;
+    background-color: transparent;
+    border-bottom-right-radius: .5rem;
+    
+}
+
+.boton-menu.active::after {
+    content: '';
+    
+    width: 1rem;
+    height: 2rem;
+    top: 100%;
+    right: 0;
+    background-color: transparent;
+    border-top-right-radius: .5rem;
+   
+}
+
+.tittle-productos{
+    color: #000;
 }
