@@ -1,4 +1,3 @@
-
 [
     {
        "id":"vodka-sky-raspberry",
@@ -85,7 +84,7 @@
      }
     ,
     {
-        "id":"viñasBalvo",
+        "id":"callia",
         "titulo":"CALLIA",
         "imagen": "./img/callia.jpg",
         "categoria":{
@@ -96,7 +95,7 @@
      }
     ,
     {
-        "id":"viñasBalvo",
+        "id":"benjaminMalbec",
         "titulo":"BENJAMIN MALBEC",
         "imagen": "./img/1901-benjamin-malbec-300x300.jpg",
         "categoria":{
@@ -127,5 +126,4 @@
         },
         "precio": 2000
      }
-
 ]
