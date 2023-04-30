@@ -1,0 +1,129 @@
+[
+    {
+       "id":"vodka-sky-raspberry",
+       "titulo":"VODKA SKYY RASPBERRY",
+       "imagen": "./img/1810-skyy-raspberry-600x600.jpg",
+       "categoria":{
+          "nombre":"Variedades",
+          "id":"variedades"
+       },
+       "precio": 2500
+    },
+    {
+       "id":"vodka-absolut",
+       "titulo":"VODKA ABSOLUT",
+       "imagen": "./img/1813-absolut-vodka-600x600.jpg",
+       "categoria":{
+          "nombre":"Variedades",
+         "id":"variedades"
+       },
+       "precio": 3000
+    },
+    {
+       "id": "vodka-absolut-mango",
+       "titulo":"VODKA ABSOLUT MANGO",
+       "imagen": "./img/1860-absolut-mango-560x560.jpg",
+       "categoria":{
+          "nombre":"Variedades",
+          "id":"variedades"
+       },
+       "precio": 3500
+    },
+    {
+       "id":"vodka-sky-citrus",
+       "titulo":"VODKA SKYY CITRUS",
+       "imagen": "./img/1811-skyy-citrus-300x300.jpg",
+       "categoria":{
+          "nombre":"Variedades",
+          "id":"variedades"
+       },
+       "precio": 2500
+    },
+    
+    {
+       "id":"fernet",
+       "titulo":"FERNET",
+       "imagen": "./img/fernet.jpg",
+       "categoria":{
+          "nombre":"Variedades",
+          "id":"variedades"
+       },
+       "precio": 2000
+    },
+    {
+        "id":"pritty",
+        "titulo":"PRITTY",
+        "imagen": "./img/pritty.jpg",
+        "categoria":{
+           "nombre":"Gaseosas",
+           "id":"gaseosas"
+        },
+        "precio": 2000
+     }
+    ,
+    {
+        "id":"coca",
+        "titulo":"COCA COLA",
+        "imagen": "./img/coca.jpg",
+        "categoria":{
+           "nombre":"Gaseosas",
+           "id":"gaseosas"
+        },
+        "precio": 2000
+     }
+    ,
+    {
+        "id":"fanta",
+        "titulo":"FANTA",
+        "imagen": "./img/fanta.jpg",
+        "categoria":{
+           "nombre":"Gaseosas",
+           "id":"gaseosas"
+        },
+        "precio": 2000
+     }
+    ,
+    {
+        "id":"viñasBalvo",
+        "titulo":"CALLIA",
+        "imagen": "./img/callia.jpg",
+        "categoria":{
+           "nombre":"Vinos",
+           "id":"vinos"
+        },
+        "precio": 2000
+     }
+    ,
+    {
+        "id":"viñasBalvo",
+        "titulo":"BENJAMIN MALBEC",
+        "imagen": "./img/1901-benjamin-malbec-300x300.jpg",
+        "categoria":{
+           "nombre":"Vinos",
+           "id":"vinos"
+        },
+        "precio": 2000
+     }
+    ,
+    {
+        "id":"altosDelPlata",
+        "titulo":"ALTOS DEL PLATA",
+        "imagen": "./img/altos-del-plata-malbec.jpg",
+        "categoria":{
+           "nombre":"Vinos",
+           "id":"vinos"
+        },
+        "precio": 2000
+     }
+    ,
+    {
+        "id":"viñasBalvo",
+        "titulo":"VINO VIÑAS DE BALBO",
+        "imagen": "./img/balvo.jpg",
+        "categoria":{
+           "nombre":"Vinos",
+           "id":"vinos"
+        },
+        "precio": 2000
+     }
+]
