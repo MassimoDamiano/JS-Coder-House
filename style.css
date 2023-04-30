@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
@@ -443,7 +442,7 @@ label{
     margin-top: 10px;
 }
 input{
-    color: #fff;
+    color: rgb(0, 0, 0);
     width: 510px;
     margin-top: 10px;
 }
@@ -583,5 +582,4 @@ p{
     .contenedor-productos {
         grid-template-columns: 1fr;
     }
-
 }
